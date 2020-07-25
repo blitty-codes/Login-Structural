@@ -1,0 +1,13 @@
+.alerts {
+  position: absolute;
+  bottom: 10%;
+  width: inherit;
+}
+  .alerts .text {
+    font-size: 20px;
+    height: auto;
+    margin-top: 0;
+    color: #dda7ad;
+    background-color: #a218f8;
+    line-height: initial;
+  }

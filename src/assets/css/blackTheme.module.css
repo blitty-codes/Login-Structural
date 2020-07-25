@@ -1,0 +1,17 @@
+.backgroundColor {
+  background-color: rgb(29, 29, 29);
+}
+
+.fillColor {
+  fill: white;
+}
+
+.primaryColor, .primaryColor::placeholder {
+  color: white;
+  transition: linear;
+  transition-duration: 1s;
+}
+
+.borderColor {
+  border-color: white;
+}

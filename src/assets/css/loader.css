@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Kalam:700&display=swap');
+
+@keyframes out { 
+  from{ opacity: 1 } 
+  to{ opacity: 0 }
+}
+
+@keyframes spinRect {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+
+@keyframes spinCircle {
+  from { transform: rotate(360deg) }
+  to { transform: rotate(0deg) }
+}
+
+.loader {
+  display: grid;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2fd1d8a1;
+
+  animation-name: out;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+}
+  .circle {
+    position: relative;
+    margin: auto;
+    top: calc(50% - 120px + 10px);
+    background-color: transparent;
+    width: 150px;
+    height: 150px;
+    border: 10px solid #27E681;
+    border-radius: 50%;
+    border-bottom: 10px solid #29B5F0;
+    background-color: #e33939c2;
+
+    animation-name: spinCircle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  .rect {
+    position: relative;
+    top: 0;
+    margin: auto;
+    top: calc(50% - 30px);
+    background-color: #29B5F0;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+
+    animation-name: spinCircle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  h3 {
+    margin: auto;
+    font-family: 'Kalam', cursive;
+  }

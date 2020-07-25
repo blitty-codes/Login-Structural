@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap');
+
+/* animations */
+@keyframes in {
+  from { opacity: 0; }
+  to { opacity: 1;}
+}
+
+.rooter {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+  canvas {
+    display: block;
+  }
+
+* {
+  margin: 0;
+}
+
+.content {
+  display: none;
+  position: absolute;
+  top: 10vh;
+  width: 40vw;
+  left: 60vw;
+
+  animation-name: in;
+  animation-duration: .5s;
+}
+
+  .header {
+    margin-top: 10%;
+
+    font-family: Bangers;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 102px;
+    align-items: center;
+    text-align: center;
+
+    opacity: 0.8;
+  }
+
+  .fields {
+    margin-top: 3rem;
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+
+    .field {
+      display: block;
+      width: 220px;
+      height: 30px;
+      padding-left: 20px;
+      padding-bottom: 0px;
+      margin-top: 5%;
+      margin-left: calc(50% - 220px/2);
+      left: 0px;
+      top: 0px;
+      
+      font-family: 'Alegreya Sans';
+      font-size: 20px;
+      
+      background: transparent;
+      
+      border: none;
+      border-bottom: 8px;
+      border-bottom-style: solid;
+      border-radius: 0;
+
+      outline: none;
+
+      transition-duration: .5s;
+      transition-delay: .2s;
+    }
+
+      .error {
+        border-bottom-color: #df2929 !important;
+      }
+
+      .field:focus {
+        border-bottom-color: #f83cf8;
+        transition-duration: .5s;
+        transition-delay: .2s;
+      }
+
+      .field:hover {
+        border-bottom-color: rgb(20, 233, 215);
+        transition-duration: .5s;
+      }
+
+      input::placeholder {
+        bottom: 0%;
+      }
+
+      .submit {
+        width: 150px;
+        position: relative;
+
+        margin-left: calc(50% - 150px/2);
+        margin-top: 2.3rem;
+      }
+
+        .submitButton {
+          width: 150px;
+          height: 50px;
+
+          font-family: Bangers;
+          font-size: 20px;
+
+          border-style: solid;
+          border-width: 10px;
+          background: transparent;
+        }
+
+          .decoration1 {
+            position: absolute;
+            height: 15px;
+            width: 20px;
+            left: 20%;
+            top: -1px;
+            z-index: 1;
+
+            transition-duration: .5s;
+            transition-delay: .5s;
+            transition-property: left;  
+          }
+
+          .decoration2 {
+            position: absolute;
+            height: 15px;
+            width: 20px;
+            right: 20%;
+            bottom: -1px;
+            z-index: 1;
+
+            transition-duration: .5s;
+            transition-delay: .5s; 
+            transition-property: right;
+          }
+
+        .submitButton:hover {
+          cursor: pointer;
+        }
+        
+        .submit:hover, .decoration1, .decoration2, .submitButton {
+          transition-duration: .5s;
+          transition-delay: .2s;
+        }
+
+        .submit:hover .decoration1 {
+          left: 70%;
+        }
+
+        .submit:hover .decoration2 {
+          right: 70%;
+        }
+
+      .link {
+        position: absolute;
+        margin-top: 2rem;
+        left: calc(20% - 39.26px);
+      }
+
+      .logos {
+        display: block;
+        width: 70vw;
+        margin: auto;
+        margin-left: 0;
+        background-color: transparent;
+      }
+
+      #lightIcon {
+        position: absolute;
+        margin-top: 1rem;
+        right: calc(20% - 39.26px);
+      }
+
+      #lightIcon:hover {
+        cursor: pointer;
+      }
+
+@media (max-width: 880px) { 
+  .logos {
+    margin-left: auto;
+    margin-top: 20%;
+  }
+
+  .header {
+    margin-top: 25%;
+  }
+
+  .content {
+    position: absolute;
+    top: initial;
+    left: initial;
+    width: 100vw;
+    height: 100vh;
+  }
+
+    .fields {
+      margin-top: 4rem;
+      height: calc(50% - 0px);
+    }
+
+  .leftArrow, .rightArrow {
+    display: none;
+  }
+}
+
+@media (min-height: 1366px) {
+  .header {
+    margin-top: 60%;
+  }
+}

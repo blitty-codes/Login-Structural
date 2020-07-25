@@ -1,0 +1,21 @@
+.backgroundColor {
+  background-color: rgb(233, 233, 233);
+}
+
+.primaryColor, .primaryColor::placeholder{
+  color: black;
+  transition: linear;
+  transition-duration: 1s;
+}
+
+.fillColor {
+  fill: black;
+}
+
+.fillSecondColor {
+  fill: #252031;
+}
+
+.borderColor {
+  border-color: black;
+}
